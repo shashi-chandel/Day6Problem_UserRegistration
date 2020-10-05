@@ -1,0 +1,7 @@
+*.pyc
+*.sql
+*.project
+*.classpath
+*.xml
+*.settings
+target
