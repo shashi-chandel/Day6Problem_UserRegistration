@@ -4,22 +4,49 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class UserRegistration {
 	private static final Logger LOG = LogManager.getLogger(UserRegistration.class);
 	private static String namePattern = "[A-Z]{1}[a-zA-Z]{2,}";
+	private static String emailPattern = "^(abc)([-/./+_]?[a-z0-9]+)?[a-z0-9]*[@][a-z1-9]+[/.][a-z]{2,3}([/.]?[a-z]{2,3})?$";
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		LOG.info("Enter your First Name:");
-		String first = sc.nextLine();
-		if (Pattern.matches(namePattern, first))
-			LOG.info("Valid first name");
+		UserRegistration userRegistration = new UserRegistration();
+		String first, last;
+		LOG.info("Enter your first name: ");
+		first = sc.nextLine();
+		if (userRegistration.validateFirstName(first))
+			LOG.info(" Valid first name!");
 		else
-			LOG.info("Invalid entry!!");
+			LOG.info(" Invalid first name!");
+
+		LOG.info("\nEnter your last name: ");
+		last = sc.nextLine();
+
+		if (userRegistration.validateFirstName(last))
+			LOG.info(" Valid last name!");
+		else
+			LOG.info(" Invalid last name!");
+
+		LOG.info("Enter your email id: ");
+		String email = sc.nextLine();
+		if (userRegistration.validateEmail(email))
+			LOG.info(" Valid email id!");
+		else
+			LOG.info(" Invalid email id!");
+		sc.close();
 	}
-	
+
 	public boolean validateFirstName(String first) {
 		return first.matches(namePattern);
+	}
+
+	public boolean validateLastName(String last) {
+		return last.matches(namePattern);
+	}
+
+	public boolean validateEmail(String email) {
+		return email.matches(emailPattern);
 	}
 }
