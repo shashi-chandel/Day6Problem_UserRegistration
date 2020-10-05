@@ -1,0 +1,33 @@
+INFO  | 2020-10-05 21:17:48 | [main] day6problem.UserRegistration (UserRegistration.java:19) - Enter your first name: 
+INFO  | 2020-10-05 21:33:16 | [main] day6problem.UserRegistration (UserRegistration.java:19) - Enter your first name: 
+INFO  | 2020-10-05 21:33:24 | [main] day6problem.UserRegistration (UserRegistration.java:22) -  Valid first name!
+INFO  | 2020-10-05 21:33:24 | [main] day6problem.UserRegistration (UserRegistration.java:26) - 
+Enter your last name: 
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:30) -  Valid last name!
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:34) - Enter your email id: 
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc@yahoo.com: true
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc-100@yahoo.com: true
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc.100@yahoo.com: true
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc111@abc.com: true
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc-100@abc.net: true
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc.100@abc.com.au: true
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc@1.com: true
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc@gmail.com.com: true
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc+100@gmail.com: true
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc: false
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc@.com.my: false
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc123@gmail.a: false
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc123@.com: false
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc123@.com.com: false
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - .abc@abc.com: false
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc()*@gmail.com: false
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc@%*.com: false
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc..2002@gmail.com: false
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc.@gmail.com: false
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc@abc@gmail.com: false
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc@gmail.com.1a: false
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:41) - abc@gmail.com.aa.au: false
+INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistration.java:43) - Enter your mobile number with country code: 
+INFO  | 2020-10-05 21:33:43 | [main] day6problem.UserRegistration (UserRegistration.java:46) -  Valid mobile number!
+INFO  | 2020-10-05 21:33:43 | [main] day6problem.UserRegistration (UserRegistration.java:50) - Enter your password having minimum 8 characters with atleast 1 Upper case, 1 digit and only 1 special character: 
+INFO  | 2020-10-05 21:33:54 | [main] day6problem.UserRegistration (UserRegistration.java:53) - Shashi@12 Valid password!

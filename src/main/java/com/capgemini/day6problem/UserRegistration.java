@@ -32,12 +32,14 @@ public class UserRegistration {
 			LOG.info(" Invalid last name!");
 
 		LOG.info("Enter your email id: ");
-		String email = sc.nextLine();
-		if (userRegistration.validateEmail(email))
-			LOG.info(" Valid email id!");
-		else
-			LOG.info(" Invalid email id!");
-		
+		String[] sampleIds = new String[] { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com",
+				"abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com", "abc",
+				"abc@.com.my", "abc123@gmail.a", "abc123@.com", "abc123@.com.com", ".abc@abc.com", "abc()*@gmail.com",
+				"abc@%*.com", "abc..2002@gmail.com", "abc.@gmail.com", "abc@abc@gmail.com", "abc@gmail.com.1a",
+				"abc@gmail.com.aa.au" };
+		for (String sample : sampleIds) {
+			LOG.info(sample + ": " + validateEmailSamples(sample));
+		}
 		LOG.info("Enter your mobile number with country code: ");
 		String mobileNumber = sc.nextLine();
 		if (userRegistration.validateMobileNumber(mobileNumber))
@@ -48,9 +50,9 @@ public class UserRegistration {
 		LOG.info("Enter your password having minimum 8 characters with atleast 1 Upper case, 1 digit and only 1 special character: ");
 		String password = sc.nextLine();
 		if (userRegistration.validatePassword(password))
-			LOG.info(password + " Valid password!");
+			LOG.info(" Valid password!");
 		else
-			LOG.info(password + " Invalid password!");
+			LOG.info(" Invalid password!");
 		sc.close();
 	}
 
@@ -62,7 +64,7 @@ public class UserRegistration {
 		return last.matches(namePattern);
 	}
 
-	public boolean validateEmail(String email) {
+	public static boolean validateEmailSamples(String email) {
 		return email.matches(emailPattern);
 	}
 	
