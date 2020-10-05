@@ -10,7 +10,8 @@ public class UserRegistration {
 	private static String namePattern = "[A-Z]{1}[a-zA-Z]{2,}";
 	private static String emailPattern = "^(abc)([-/./+_]?[a-z0-9]+)?[a-z0-9]*[@][a-z1-9]+[/.][a-z]{2,3}([/.]?[a-z]{2,3})?$";
 	private static final String mobilePattern = "[0-9]{2}[' ']{1}[789]{1}[0-9]{9}";
-
+	private static final String passwordPattern = "[a-zA-Z0-9[^a-zA-Z0-9]]{8,}";
+			
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		UserRegistration userRegistration = new UserRegistration();
@@ -43,6 +44,13 @@ public class UserRegistration {
 			LOG.info(" Valid mobile number!");
 		else
 			LOG.info(" Invalid mobile number!");
+		
+		LOG.info("Enter your password having minimum 8 characters: ");
+		String password = sc.nextLine();
+		if (userRegistration.validatePassword(password))
+			LOG.info(password + " Valid password!");
+		else
+			LOG.info(password + " Invalid password!");
 		sc.close();
 	}
 
@@ -60,5 +68,9 @@ public class UserRegistration {
 	
 	public boolean validateMobileNumber(String mobile) {
 		return mobile.matches(mobilePattern);
+	}
+	
+	public boolean validatePassword(String password) {
+		return password.matches(passwordPattern);
 	}
 }
