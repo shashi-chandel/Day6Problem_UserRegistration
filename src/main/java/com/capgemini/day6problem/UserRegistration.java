@@ -10,7 +10,7 @@ public class UserRegistration {
 	private static String namePattern = "[A-Z]{1}[a-zA-Z]{2,}";
 	private static String emailPattern = "^(abc)([-/./+_]?[a-z0-9]+)?[a-z0-9]*[@][a-z1-9]+[/.][a-z]{2,3}([/.]?[a-z]{2,3})?$";
 	private static final String mobilePattern = "[0-9]{2}[' ']{1}[789]{1}[0-9]{9}";
-	private static final String passwordPattern = "[a-zA-Z0-9[^a-zA-Z0-9]]{8,}";
+	private static final String passwordPattern = "^(?=.{8,}$)(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]*[@#$%^*!&][0-9a-zA-Z]*";
 			
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -45,7 +45,7 @@ public class UserRegistration {
 		else
 			LOG.info(" Invalid mobile number!");
 		
-		LOG.info("Enter your password having minimum 8 characters: ");
+		LOG.info("Enter your password having minimum 8 characters with atleast 1 Upper case, 1 digit and only 1 special character: ");
 		String password = sc.nextLine();
 		if (userRegistration.validatePassword(password))
 			LOG.info(password + " Valid password!");
