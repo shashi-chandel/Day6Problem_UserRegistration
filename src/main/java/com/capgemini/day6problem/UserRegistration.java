@@ -9,6 +9,7 @@ public class UserRegistration {
 	private static final Logger LOG = LogManager.getLogger(UserRegistration.class);
 	private static String namePattern = "[A-Z]{1}[a-zA-Z]{2,}";
 	private static String emailPattern = "^(abc)([-/./+_]?[a-z0-9]+)?[a-z0-9]*[@][a-z1-9]+[/.][a-z]{2,3}([/.]?[a-z]{2,3})?$";
+	private static final String mobilePattern = "[0-9]{2}[' ']{1}[789]{1}[0-9]{9}";
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -35,6 +36,13 @@ public class UserRegistration {
 			LOG.info(" Valid email id!");
 		else
 			LOG.info(" Invalid email id!");
+		
+		LOG.info("Enter your mobile number with country code: ");
+		String mobileNumber = sc.nextLine();
+		if (userRegistration.validateMobileNumber(mobileNumber))
+			LOG.info(" Valid mobile number!");
+		else
+			LOG.info(" Invalid mobile number!");
 		sc.close();
 	}
 
@@ -48,5 +56,9 @@ public class UserRegistration {
 
 	public boolean validateEmail(String email) {
 		return email.matches(emailPattern);
+	}
+	
+	public boolean validateMobileNumber(String mobile) {
+		return mobile.matches(mobilePattern);
 	}
 }
