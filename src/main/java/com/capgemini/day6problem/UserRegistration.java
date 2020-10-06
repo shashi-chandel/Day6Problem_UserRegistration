@@ -7,12 +7,12 @@ public class UserRegistration {
 	private static final String mobilePattern = "[1-9]{2}[' ']{1}[789]{1}[0-9]{9}";
 	private static final String passwordPattern = "^(?=.{8,}$)(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]*[@#$%^*!&][0-9a-zA-Z]*";
 
-	public boolean validateFirst(String fname) {
-		return fname.matches(namePattern);
+	public boolean validateFirst(String first) {
+		return first.matches(namePattern);
 	}
 
-	public boolean validateLast(String lname) {
-		return lname.matches(namePattern);
+	public boolean validateLast(String last) {
+		return last.matches(namePattern);
 	}
 
 	public boolean validateEmail(String email) {
