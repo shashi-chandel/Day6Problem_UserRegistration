@@ -32,9 +32,13 @@ public class validateEmailsTest {
 
 	@Test
 	public void givenEmail_ShouldReturnResult() {
-		UserRegistration userRegistration = new UserRegistration();
-		boolean result = userRegistration.validateEmail(this.email);
-		Assert.assertEquals(this.result, result);
+		try {
+			UserRegistration userRegistration = new UserRegistration();
+			boolean result = userRegistration.validateEmail(this.email);
+			Assert.assertEquals(this.result, result);
+		} catch (UserRegistrationException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -31,3 +31,4 @@ INFO  | 2020-10-05 21:33:27 | [main] day6problem.UserRegistration (UserRegistrat
 INFO  | 2020-10-05 21:33:43 | [main] day6problem.UserRegistration (UserRegistration.java:46) -  Valid mobile number!
 INFO  | 2020-10-05 21:33:43 | [main] day6problem.UserRegistration (UserRegistration.java:50) - Enter your password having minimum 8 characters with atleast 1 Upper case, 1 digit and only 1 special character: 
 INFO  | 2020-10-05 21:33:54 | [main] day6problem.UserRegistration (UserRegistration.java:53) - Shashi@12 Valid password!
+INFO  | 2020-10-06 10:20:38 | [main] day6problem.UserRegistration (UserRegistration.java:16) - Welcome to Vaidation and Testing
