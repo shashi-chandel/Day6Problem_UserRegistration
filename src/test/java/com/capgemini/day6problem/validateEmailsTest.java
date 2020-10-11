@@ -42,3 +42,7 @@ public class validateEmailsTest {
 	}
 
 }
+
+/**
+ * UC6
+ */
